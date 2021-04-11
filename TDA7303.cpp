@@ -26,8 +26,8 @@ void TDA7303::att_rf(byte rf){
      writeWire(0b10100000 + rf); 
 }
 
-void TDA7303::audio_sw(byte in, bool loud, byte loud_gain){
-     writeWire(0b01000000 + in + (loud << 2) + (loud_gain << 3));
+void TDA7303::audio_sw(byte in, bool loud, byte gain){
+     writeWire(0b01000000 + in + (loud << 2) + (gain << 3));
 }
 
 void TDA7303::set_bass(char bass){
