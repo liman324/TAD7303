@@ -18,10 +18,10 @@ class TDA7303
     void att_rr(byte rr);  // byte 0...30 === 0...-37.5 dB (step 1.25 dB), byte 31 === mute
     void att_lf(byte lf);  // byte 0...30 === 0...-37.5 dB (step 1.25 dB), byte 31 === mute
     void att_rf(byte rf);  // byte 0...30 === 0...-37.5 dB (step 1.25 dB), byte 31 === mute
-    void audio_sw(byte in, bool loud, byte loud_gain);
+    void audio_sw(byte in, bool loud, byte gain);
       // byte 0...2 === input 0...2, byte 3 === Not allowed
       // bool 0...1 === loudness_on...loudness_off
-      // byte 0...3 === loudness_gain 11.25...0 dB
+      // byte 0...3 === gain 11.25...0 dB
     void set_bass(char bass); // int -7...7 === bass -14...+14 dB
     void set_treb(char treb); // int -7...7 === treble -14...+14 dB
 	
